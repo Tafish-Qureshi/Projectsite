@@ -4,9 +4,11 @@
     "choices": {
       "De brief lezen": "brief",
       "Rondkijken in de bibliotheek": "boeken",
-      "De kristallen bol onderzoeken": "bol"
+      "De kristallen bol onderzoeken": "bol",
+      "Zoek naar verborgen doorgangen": "geheime_kelder"
     }
   },
+
   "brief": {
     "text": "📜 Je opent de brief en leest een waarschuwing: een krachtig artefact, de Codex of Whispers, is gestolen! De constabulary en het Athenaeum zijn in paniek.",
     "choices": {
@@ -14,13 +16,26 @@
       "Ga naar het dak van de kloktoren": "dak"
     }
   },
+
   "boeken": {
     "text": "📚 Terwijl je rondkijkt, valt je oog op een oud boek dat glinstert met magische runen. Het lijkt aanwijzingen te bevatten over de dief en de gebruikte magie.",
     "choices": {
       "Bestudeer het boek verder": "boek_studie",
-      "Negeer het boek en ga naar het dak van de kloktoren": "dak"
+      "Negeer het boek en ga naar het dak van de kloktoren": "dak",
+      "Noteer cryptische formules": "formules_opgeslagen"
     }
   },
+
+  "formules_opgeslagen": {
+    "text": "✏️ Je krabbelt de cryptische formules over in je eigen notitieboek. Ze lijken onschuldig, maar ze kunnen nog van pas komen.",
+    "actions": {
+      "add_item": "Cryptische Formules"
+    },
+    "choices": {
+      "Ga terug naar de bibliotheek": "bibliotheek"
+    }
+  },
+
   "bol": {
     "text": "🔮 De kristallen bol toont flarden van een verre plek waar iets misgaat. Je krijgt een visioen: een jongeman met een boek op een ijzeren dak, de wind waait hard.",
     "choices": {
@@ -28,6 +43,7 @@
       "Negeer het visioen en onderzoek de bibliotheek verder": "boeken"
     }
   },
+
   "logboeken": {
     "text": "🗃️ Je doorzoekt de logboeken en ontdekt dat de nachtjanitor ziek was en een vervanger, Corvin, de Codex tijdelijk bewaakte. Dit is een belangrijke aanwijzing.",
     "choices": {
@@ -35,48 +51,149 @@
       "Ga direct naar het dak van de kloktoren": "dak"
     }
   },
+
   "boek_studie": {
-    "text": "📖 Je bestudeert het oude boek en ontdekt complexe magische formules die de Athenaeum-wards kunnen analyseren. Dit kan helpen de dief te achterhalen.",
+    "text": "📖 Je bestudeert het oude boek en ontdekt complexe magische formules die de Athenaeum-wards kunnen analyseren.",
     "choices": {
       "Gebruik de formules om de Codex te lokaliseren": "dak",
       "Ga naar het dak van de kloktoren zonder verdere analyse": "dak"
     }
   },
+
   "woning": {
-    "text": "🏠 Je gaat naar Corvin's woning en vindt een stapel notities met een wiskundig en filosofisch bewijs om de wards te herschrijven. Corvin is er niet.",
+    "text": "🏠 Je gaat naar Corvin's woning en vindt een stapel notities met een rationeel bewijs om de wards te herschrijven. Corvin is er niet.",
     "choices": {
       "Ga naar het dak van de kloktoren": "dak"
     }
   },
+
   "dak": {
     "text": "🌁 Je klimt naar het dak van de kloktoren en ziet Corvin zitten, het Codex open naast hem. De wind huilt, maar zijn ogen branden van concentratie.",
     "choices": {
       "Confronteer Corvin": "confrontatie",
-      "Observeer stilletjes en analyseer zijn techniek": "analyse"
+      "Observeer stilletjes en analyseer zijn techniek": "analyse",
+      "Gebruik een item": "dak_items"
     }
   },
+
+  "dak_items": {
+    "text": "🎒 Je doorzoekt je inventaris. Sommige items kunnen hier krachtig zijn...",
+    "choices": {
+      "Gebruik Cryptische Formules": {
+        "to": "formules_effect",
+        "require_item": "Cryptische Formules"
+      },
+      "Gebruik Astral Lens": {
+        "to": "lens_visioen",
+        "require_item": "Astral Lens"
+      },
+      "Stop met items gebruiken": "dak"
+    }
+  },
+
+  "formules_effect": {
+    "text": "⚡ Je leest de Cryptische Formules luidop. De lucht bevriest even, en Corvin kijkt op, verrast. Je hebt zijn focus verbroken.",
+    "choices": {
+      "Confronteer Corvin nu": "confrontatie",
+      "Val hem aan met een spreuk": "einde_slecht"
+    }
+  },
+
+  "lens_visioen": {
+    "text": "🔭 Door de Astral Lens zie je achter Corvin een tweede schaduwfiguur. Iemand stuurt hem aan. Het complot is groter dan gedacht.",
+    "choices": {
+      "Probeer de schaduwfiguur te onthullen": "schaduw",
+      "Negeer het visioen en ga door": "dak"
+    }
+  },
+
+  "schaduw": {
+    "text": "👁️ De Astral Lens onthult een astrale echo: een oude magus die ooit verbannen werd. Hij gebruikt Corvin als kanaal.",
+    "choices": {
+      "Verbreek de astrale verbinding": "herstel",
+      "Val de echo aan": "einde_slecht"
+    }
+  },
+
   "analyse": {
-    "text": "🔬 Je observeert Corvin en ziet hoe hij de wards rationeel herschrijft. Het is geen magie in traditionele zin, maar een theorie die de Weave herschikt.",
+    "text": "🔬 Je observeert Corvin en ziet hoe hij de wards herschrijft. Geen magie in klassieke zin, maar pure logica.",
     "choices": {
       "Gebruik de notities om de Weave te herstellen": "herstel",
       "Confronteer Corvin direct": "confrontatie"
     }
   },
+
   "confrontatie": {
-    "text": "⚔️ Je confronteert Corvin. Hij legt uit dat hij het artefact 'bevrijd' heeft van superstition. Het draait om begrip, niet macht.",
+    "text": "⚔️ Je confronteert Corvin. Hij legt uit dat hij het artefact 'bevrijd' heeft van superstition.",
     "choices": {
       "Gebruik zijn notities om de Weave te herstellen": "herstel",
       "Laat hem gaan": "einde"
     }
   },
+
   "herstel": {
-    "text": "✨ Je gebruikt de logica en notities van Corvin om de Weave te herstellen. De Codex gloeit zacht en keert terug in veiligheid. Corvin geeft zich over door begrip.",
+    "text": "✨ Je gebruikt rationele logica én magie om de Weave te herstellen. Het Codex keert terug naar veiligheid.",
     "choices": {
       "Klaar met het avontuur": "einde"
     }
   },
+
+  "geheime_kelder": {
+    "text": "🕳️ Een verborgen trap leidt omlaag naar een koude, vergeten kelder vol stof en magie.",
+    "actions": {
+      "add_item": "Onyx Sleutel"
+    },
+    "choices": {
+      "Ga omhoog": "bibliotheek",
+      "Open de donkere deur": {
+        "to": "donkere_kamer",
+        "require_item": "Onyx Sleutel"
+      }
+    }
+  },
+
+  "donkere_kamer": {
+    "text": "🌑 De kamer is gevuld met schaduwen die lijken te luisteren. In het midden staat een stenen pedestal.",
+    "choices": {
+      "Onderzoek de pedestal": "pedestal",
+      "Ga terug naar de kelder": "geheime_kelder"
+    }
+  },
+
+  "pedestal": {
+    "text": "🔺 Op de pedestal ligt een kristallen artefact dat pulseert. Ernaast staat een waarschuwing in runen: 'Alleen de ware ziener ziet de waarheid.'",
+    "choices": {
+      "Raak het artefact aan": "artefact_opgepakt",
+      "Bestudeer de runen": "runen",
+      "Ga terug": "donkere_kamer"
+    }
+  },
+
+  "runen": {
+    "text": "🔡 De runen vermelden dat het artefact slechts veilig is voor iemand met helder inzicht.",
+    "choices": {
+      "Probeer het artefact toch": "artefact_opgepakt",
+      "Laat het liggen": "donkere_kamer"
+    }
+  },
+
+  "artefact_opgepakt": {
+    "text": "💠 Bij aanraking wordt de kamer helder. Je hebt een krachtig magisch object verkregen: de Astral Lens.",
+    "actions": {
+      "add_item": "Astral Lens"
+    },
+    "choices": {
+      "Verlaat de kamer": "donkere_kamer"
+    }
+  },
+
+  "einde_slecht": {
+    "text": "🩸 Je poging loopt tragisch af. De Weave scheurt en duisternis valt. Dit einde is geschreven in stilte.",
+    "choices": {}
+  },
+
   "einde": {
-    "text": "☕ Terug in je kantoor, terwijl regenpatronen op de ramen dansen, besef je dat de grootste mysteries vaak niet over magie gaan, maar over motivatie en begrip. Je hebt een onmogelijke zaak opgelost.",
+    "text": "☕ Terug in je kantoor, terwijl regenpatronen op de ramen dansen, besef je dat de grootste mysteries vaak niet over magie gaan, maar over motivatie en begrip.",
     "choices": {}
   }
 }
