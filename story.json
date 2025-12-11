@@ -1,0 +1,82 @@
+{
+  "bibliotheek": {
+    "text": "🕯️ Je bevindt je in je magische bibliotheek, omringd door oude boeken en vreemde artefacten. Een zachte gloed komt van een kristallen bol op je bureau. Plotseling valt er een mysterieuze brief voor je neer.",
+    "choices": {
+      "De brief lezen": "brief",
+      "Rondkijken in de bibliotheek": "boeken",
+      "De kristallen bol onderzoeken": "bol"
+    }
+  },
+  "brief": {
+    "text": "📜 Je opent de brief en leest een waarschuwing: een krachtig artefact, de Codex of Whispers, is gestolen! De constabulary en het Athenaeum zijn in paniek.",
+    "choices": {
+      "Onderzoek de logboeken van het Athenaeum": "logboeken",
+      "Ga naar het dak van de kloktoren": "dak"
+    }
+  },
+  "boeken": {
+    "text": "📚 Terwijl je rondkijkt, valt je oog op een oud boek dat glinstert met magische runen. Het lijkt aanwijzingen te bevatten over de dief en de gebruikte magie.",
+    "choices": {
+      "Bestudeer het boek verder": "boek_studie",
+      "Negeer het boek en ga naar het dak van de kloktoren": "dak"
+    }
+  },
+  "bol": {
+    "text": "🔮 De kristallen bol toont flarden van een verre plek waar iets misgaat. Je krijgt een visioen: een jongeman met een boek op een ijzeren dak, de wind waait hard.",
+    "choices": {
+      "Volg het visioen naar het dak": "dak",
+      "Negeer het visioen en onderzoek de bibliotheek verder": "boeken"
+    }
+  },
+  "logboeken": {
+    "text": "🗃️ Je doorzoekt de logboeken en ontdekt dat de nachtjanitor ziek was en een vervanger, Corvin, de Codex tijdelijk bewaakte. Dit is een belangrijke aanwijzing.",
+    "choices": {
+      "Ga naar Corvin's woning": "woning",
+      "Ga direct naar het dak van de kloktoren": "dak"
+    }
+  },
+  "boek_studie": {
+    "text": "📖 Je bestudeert het oude boek en ontdekt complexe magische formules die de Athenaeum-wards kunnen analyseren. Dit kan helpen de dief te achterhalen.",
+    "choices": {
+      "Gebruik de formules om de Codex te lokaliseren": "dak",
+      "Ga naar het dak van de kloktoren zonder verdere analyse": "dak"
+    }
+  },
+  "woning": {
+    "text": "🏠 Je gaat naar Corvin's woning en vindt een stapel notities met een wiskundig en filosofisch bewijs om de wards te herschrijven. Corvin is er niet.",
+    "choices": {
+      "Ga naar het dak van de kloktoren": "dak"
+    }
+  },
+  "dak": {
+    "text": "🌁 Je klimt naar het dak van de kloktoren en ziet Corvin zitten, het Codex open naast hem. De wind huilt, maar zijn ogen branden van concentratie.",
+    "choices": {
+      "Confronteer Corvin": "confrontatie",
+      "Observeer stilletjes en analyseer zijn techniek": "analyse"
+    }
+  },
+  "analyse": {
+    "text": "🔬 Je observeert Corvin en ziet hoe hij de wards rationeel herschrijft. Het is geen magie in traditionele zin, maar een theorie die de Weave herschikt.",
+    "choices": {
+      "Gebruik de notities om de Weave te herstellen": "herstel",
+      "Confronteer Corvin direct": "confrontatie"
+    }
+  },
+  "confrontatie": {
+    "text": "⚔️ Je confronteert Corvin. Hij legt uit dat hij het artefact 'bevrijd' heeft van superstition. Het draait om begrip, niet macht.",
+    "choices": {
+      "Gebruik zijn notities om de Weave te herstellen": "herstel",
+      "Laat hem gaan": "einde"
+    }
+  },
+  "herstel": {
+    "text": "✨ Je gebruikt de logica en notities van Corvin om de Weave te herstellen. De Codex gloeit zacht en keert terug in veiligheid. Corvin geeft zich over door begrip.",
+    "choices": {
+      "Klaar met het avontuur": "einde"
+    }
+  },
+  "einde": {
+    "text": "☕ Terug in je kantoor, terwijl regenpatronen op de ramen dansen, besef je dat de grootste mysteries vaak niet over magie gaan, maar over motivatie en begrip. Je hebt een onmogelijke zaak opgelost.",
+    "choices": {}
+  }
+}
